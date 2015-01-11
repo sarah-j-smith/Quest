@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F68388F21A62E5E70058A2B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68388F11A62E5E70058A2B8 /* AppDelegate.swift */; };
+		F68388F41A62E5E70058A2B8 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68388F31A62E5E70058A2B8 /* Document.swift */; };
+		F68388F71A62E5E70058A2B8 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68388F51A62E5E70058A2B8 /* Document.xib */; };
+		F68388F91A62E5E70058A2B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68388F81A62E5E70058A2B8 /* Images.xcassets */; };
+		F68388FC1A62E5E70058A2B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68388FA1A62E5E70058A2B8 /* MainMenu.xib */; };
+		F68389081A62E5E70058A2B8 /* QuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68389071A62E5E70058A2B8 /* QuestTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F68389021A62E5E70058A2B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F68388E41A62E5E60058A2B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F68388EB1A62E5E70058A2B8;
+			remoteInfo = Quest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F68388EC1A62E5E70058A2B8 /* Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68388F01A62E5E70058A2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68388F11A62E5E70058A2B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F68388F31A62E5E70058A2B8 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		F68388F61A62E5E70058A2B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
+		F68388F81A62E5E70058A2B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F68388FB1A62E5E70058A2B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F68389011A62E5E70058A2B8 /* QuestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68389061A62E5E70058A2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68389071A62E5E70058A2B8 /* QuestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F68388E91A62E5E70058A2B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68388FE1A62E5E70058A2B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F68388E31A62E5E60058A2B8 = {
+			isa = PBXGroup;
+			children = (
+				F68388EE1A62E5E70058A2B8 /* Quest */,
+				F68389041A62E5E70058A2B8 /* QuestTests */,
+				F68388ED1A62E5E70058A2B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F68388ED1A62E5E70058A2B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F68388EC1A62E5E70058A2B8 /* Quest.app */,
+				F68389011A62E5E70058A2B8 /* QuestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F68388EE1A62E5E70058A2B8 /* Quest */ = {
+			isa = PBXGroup;
+			children = (
+				F68388F11A62E5E70058A2B8 /* AppDelegate.swift */,
+				F68388F31A62E5E70058A2B8 /* Document.swift */,
+				F68388F51A62E5E70058A2B8 /* Document.xib */,
+				F68388F81A62E5E70058A2B8 /* Images.xcassets */,
+				F68388FA1A62E5E70058A2B8 /* MainMenu.xib */,
+				F68388EF1A62E5E70058A2B8 /* Supporting Files */,
+			);
+			path = Quest;
+			sourceTree = "<group>";
+		};
+		F68388EF1A62E5E70058A2B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F68388F01A62E5E70058A2B8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F68389041A62E5E70058A2B8 /* QuestTests */ = {
+			isa = PBXGroup;
+			children = (
+				F68389071A62E5E70058A2B8 /* QuestTests.swift */,
+				F68389051A62E5E70058A2B8 /* Supporting Files */,
+			);
+			path = QuestTests;
+			sourceTree = "<group>";
+		};
+		F68389051A62E5E70058A2B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F68389061A62E5E70058A2B8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F68388EB1A62E5E70058A2B8 /* Quest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F683890B1A62E5E70058A2B8 /* Build configuration list for PBXNativeTarget "Quest" */;
+			buildPhases = (
+				F68388E81A62E5E70058A2B8 /* Sources */,
+				F68388E91A62E5E70058A2B8 /* Frameworks */,
+				F68388EA1A62E5E70058A2B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quest;
+			productName = Quest;
+			productReference = F68388EC1A62E5E70058A2B8 /* Quest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F68389001A62E5E70058A2B8 /* QuestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F683890E1A62E5E70058A2B8 /* Build configuration list for PBXNativeTarget "QuestTests" */;
+			buildPhases = (
+				F68388FD1A62E5E70058A2B8 /* Sources */,
+				F68388FE1A62E5E70058A2B8 /* Frameworks */,
+				F68388FF1A62E5E70058A2B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F68389031A62E5E70058A2B8 /* PBXTargetDependency */,
+			);
+			name = QuestTests;
+			productName = QuestTests;
+			productReference = F68389011A62E5E70058A2B8 /* QuestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F68388E41A62E5E60058A2B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Sarah Smith";
+				TargetAttributes = {
+					F68388EB1A62E5E70058A2B8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F68389001A62E5E70058A2B8 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = F68388EB1A62E5E70058A2B8;
+					};
+				};
+			};
+			buildConfigurationList = F68388E71A62E5E60058A2B8 /* Build configuration list for PBXProject "Quest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F68388E31A62E5E60058A2B8;
+			productRefGroup = F68388ED1A62E5E70058A2B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F68388EB1A62E5E70058A2B8 /* Quest */,
+				F68389001A62E5E70058A2B8 /* QuestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F68388EA1A62E5E70058A2B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68388F71A62E5E70058A2B8 /* Document.xib in Resources */,
+				F68388F91A62E5E70058A2B8 /* Images.xcassets in Resources */,
+				F68388FC1A62E5E70058A2B8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68388FF1A62E5E70058A2B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F68388E81A62E5E70058A2B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68388F41A62E5E70058A2B8 /* Document.swift in Sources */,
+				F68388F21A62E5E70058A2B8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68388FD1A62E5E70058A2B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68389081A62E5E70058A2B8 /* QuestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F68389031A62E5E70058A2B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F68388EB1A62E5E70058A2B8 /* Quest */;
+			targetProxy = F68389021A62E5E70058A2B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F68388F51A62E5E70058A2B8 /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F68388F61A62E5E70058A2B8 /* Base */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		F68388FA1A62E5E70058A2B8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F68388FB1A62E5E70058A2B8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F68389091A62E5E70058A2B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F683890A1A62E5E70058A2B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F683890C1A62E5E70058A2B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Quest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F683890D1A62E5E70058A2B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Quest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F683890F1A62E5E70058A2B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QuestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quest.app/Contents/MacOS/Quest";
+			};
+			name = Debug;
+		};
+		F68389101A62E5E70058A2B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QuestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quest.app/Contents/MacOS/Quest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F68388E71A62E5E60058A2B8 /* Build configuration list for PBXProject "Quest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F68389091A62E5E70058A2B8 /* Debug */,
+				F683890A1A62E5E70058A2B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F683890B1A62E5E70058A2B8 /* Build configuration list for PBXNativeTarget "Quest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F683890C1A62E5E70058A2B8 /* Debug */,
+				F683890D1A62E5E70058A2B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F683890E1A62E5E70058A2B8 /* Build configuration list for PBXNativeTarget "QuestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F683890F1A62E5E70058A2B8 /* Debug */,
+				F68389101A62E5E70058A2B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F68388E41A62E5E60058A2B8 /* Project object */;
+}
