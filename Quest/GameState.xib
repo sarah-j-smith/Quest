@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GameStateViewController" customModule="Quest" customModuleProvider="target">
+            <connections>
+                <outlet property="editGameButton" destination="elI-1N-wZF" id="Xpy-lc-G38"/>
+                <outlet property="editTitleButton" destination="itS-FZ-0qQ" id="zuN-xn-m6g"/>
+                <outlet property="gameStateObjectController" destination="xqv-nD-6d3" id="amS-nF-zaO"/>
+                <outlet property="gameTitleBox" destination="uqR-Vo-XaX" id="U6x-FJ-QTo"/>
+                <outlet property="gameTitleLabel" destination="tbD-29-ynv" id="GEw-g2-3vy"/>
+                <outlet property="gameTitleTextField" destination="WZ7-ia-ah7" id="eAi-oy-9yv"/>
+                <outlet property="view" destination="c22-O7-iKe" id="WCy-x9-nY2"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="Game Title" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="uqR-Vo-XaX">
+                    <rect key="frame" x="97" y="72" width="286" height="124"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="284" height="108"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tbD-29-ynv">
+                                <rect key="frame" x="61" y="52" width="163" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="c1O-4p-gVJ"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" alignment="center" title="Once Apon A Time" id="6eJ-58-iH4">
+                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="xqv-nD-6d3" name="value" keyPath="selection.gameName" id="hDy-cS-zl5"/>
+                                    <outlet property="delegate" destination="-2" id="nSE-cl-AJb"/>
+                                </connections>
+                            </textField>
+                            <textField hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WZ7-ia-ah7">
+                                <rect key="frame" x="18" y="52" width="248" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0GJ-dd-ETb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="editingFinished:" target="-2" id="HdB-9P-G50"/>
+                                    <binding destination="xqv-nD-6d3" name="value" keyPath="selection.gameName" id="BOB-u5-Hpi"/>
+                                    <outlet property="delegate" destination="-2" id="nwG-YZ-78R"/>
+                                </connections>
+                            </textField>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itS-FZ-0qQ">
+                                <rect key="frame" x="253" y="85" width="13" height="13"/>
+                                <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QgQ-lw-xe5">
+                                    <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="editGameTitle:" target="-2" id="ifV-dL-aOD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="WZ7-ia-ah7" secondAttribute="trailing" constant="16" id="3BF-uC-0WQ"/>
+                        <constraint firstAttribute="centerX" secondItem="tbD-29-ynv" secondAttribute="centerX" id="NJL-RV-VAU"/>
+                        <constraint firstItem="WZ7-ia-ah7" firstAttribute="leading" secondItem="uqR-Vo-XaX" secondAttribute="leading" constant="16" id="UZu-VL-vaf"/>
+                        <constraint firstAttribute="height" constant="120" id="WAa-e3-bqR"/>
+                        <constraint firstAttribute="centerY" secondItem="tbD-29-ynv" secondAttribute="centerY" id="ddA-K3-T92"/>
+                        <constraint firstAttribute="width" constant="280" id="lHR-jM-Vgq"/>
+                        <constraint firstAttribute="centerY" secondItem="WZ7-ia-ah7" secondAttribute="centerY" id="p9e-KR-SaP"/>
+                    </constraints>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <button toolTip="Edit Game" translatesAutoresizingMaskIntoConstraints="NO" id="elI-1N-wZF" userLabel="Edit Game Button">
+                    <rect key="frame" x="388" y="120" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="ATz-dR-QYK"/>
+                        <constraint firstAttribute="height" constant="32" id="UJY-XX-zlS"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSGoRightTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="XyZ-rF-2cg">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="editGame:" target="-2" id="KuS-y5-80E"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="elI-1N-wZF" firstAttribute="leading" secondItem="uqR-Vo-XaX" secondAttribute="trailing" constant="8" id="UGs-nl-mRH"/>
+                <constraint firstAttribute="centerX" secondItem="uqR-Vo-XaX" secondAttribute="centerX" id="fhq-5F-5oR"/>
+                <constraint firstAttribute="centerY" secondItem="uqR-Vo-XaX" secondAttribute="centerY" id="lfI-5J-cNd"/>
+                <constraint firstAttribute="centerY" secondItem="elI-1N-wZF" secondAttribute="centerY" id="nnz-rp-yLo"/>
+            </constraints>
+        </customView>
+        <objectController objectClassName="Quest.GameState" id="xqv-nD-6d3" userLabel="Game State">
+            <declaredKeys>
+                <string>gameName</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="-2" name="contentObject" keyPath="representedObject" id="dvZ-CP-6xI"/>
+            </connections>
+        </objectController>
+        <userDefaultsController representsSharedInstance="YES" id="QTv-gG-Ixx"/>
+    </objects>
+    <resources>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+    </resources>
+</document>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RoomListViewController" customModule="Quest" customModuleProvider="target">
+            <connections>
+                <outlet property="roomArrayController" destination="vRa-j1-4Je" id="NIo-Dz-InF"/>
+                <outlet property="tableView" destination="ne6-cj-70G" id="ufz-Qg-1Lk"/>
+                <outlet property="view" destination="HoO-bN-Ksz" id="FTA-Qd-dn3"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <arrayController objectClassName="Quest.Room" id="vRa-j1-4Je" userLabel="Rooms Array Controller">
+            <declaredKeys>
+                <string>roomKey</string>
+                <string>roomName</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="-2" name="contentArray" keyPath="representedObject.rooms" id="aGm-co-lJz"/>
+            </connections>
+        </arrayController>
+        <userDefaultsController representsSharedInstance="YES" id="h2Z-Rv-FIM"/>
+        <customView id="HoO-bN-Ksz">
+            <rect key="frame" x="0.0" y="-4" width="569" height="355"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY0-V3-ESz">
+                    <rect key="frame" x="0.0" y="0.0" width="569" height="355"/>
+                    <clipView key="contentView" id="X0O-FN-ERA">
+                        <rect key="frame" x="1" y="0.0" width="238" height="134"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" autosaveName="RoomListTableView" rowSizeStyle="automatic" headerView="LoW-rp-ovs" viewBased="YES" id="ne6-cj-70G">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <size key="intercellSpacing" width="3" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <tableColumns>
+                                    <tableColumn identifier="roomKey" width="116" minWidth="40" maxWidth="1000" id="oKx-SH-wGv" userLabel="Room Key">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Room Key">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="R4a-kh-Hse">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <prototypeCellViews>
+                                            <tableCellView id="ya7-MT-y7F">
+                                                <rect key="frame" x="1" y="1" width="116" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="SOs-QW-hpC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="116" height="17"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" placeholderString="Room Key" id="Gi0-YV-f49">
+                                                            <customFormatter key="formatter" id="9Hk-nw-jvr" customClass="FragmentValueFormatter" customModule="Quest" customModuleProvider="target"/>
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="ya7-MT-y7F" name="value" keyPath="objectValue.roomKey" id="YXl-Yg-Ydz">
+                                                                <dictionary key="options">
+                                                                    <bool key="NSConditionallySetsEditable" value="YES"/>
+                                                                </dictionary>
+                                                            </binding>
+                                                            <outlet property="delegate" destination="-2" id="ol6-E3-hFf"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="SOs-QW-hpC" firstAttribute="leading" secondItem="ya7-MT-y7F" secondAttribute="leading" constant="2" id="Pqe-bf-bfk"/>
+                                                    <constraint firstAttribute="centerY" secondItem="SOs-QW-hpC" secondAttribute="centerY" id="ShR-hC-YtG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SOs-QW-hpC" secondAttribute="trailing" constant="2" id="ZRG-Ne-rw6"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="textField" destination="SOs-QW-hpC" id="KrG-je-NhT"/>
+                                                </connections>
+                                            </tableCellView>
+                                        </prototypeCellViews>
+                                    </tableColumn>
+                                    <tableColumn identifier="roomName" width="445" minWidth="40" maxWidth="1000" id="o07-V0-mYj" userLabel="Room Name">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Room Name">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="533-Ms-gRk">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <prototypeCellViews>
+                                            <tableCellView id="Hdc-EW-Reb">
+                                                <rect key="frame" x="120" y="1" width="445" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-NZ-dlF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="426" height="17"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" placeholderString="Room Name" id="Et0-R8-Aey">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="Hdc-EW-Reb" name="value" keyPath="objectValue.roomName" id="1dF-K6-NZ5">
+                                                                <dictionary key="options">
+                                                                    <bool key="NSConditionallySetsEditable" value="YES"/>
+                                                                </dictionary>
+                                                            </binding>
+                                                            <outlet property="delegate" destination="-2" id="pja-4g-hlG"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sru-0Y-Ops">
+                                                        <rect key="frame" x="426" y="-2" width="17" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="17" id="lS9-No-GcT"/>
+                                                            <constraint firstAttribute="width" constant="17" id="y2v-CE-djL"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSGoRightTemplate" imagePosition="above" alignment="left" imageScaling="proportionallyDown" id="26f-d0-bCr">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="label"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <binding destination="Hdc-EW-Reb" name="argument" keyPath="objectValue" id="Nkq-xf-T2U">
+                                                                <dictionary key="options">
+                                                                    <string key="NSSelectorName">editRoom:</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                            <binding destination="-2" name="target" keyPath="self" previousBinding="Nkq-xf-T2U" id="YAW-PM-Zbv">
+                                                                <dictionary key="options">
+                                                                    <string key="NSSelectorName">editRoom:</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="centerY" secondItem="sru-0Y-Ops" secondAttribute="centerY" constant="-2" id="KWd-Fc-pGf"/>
+                                                    <constraint firstAttribute="centerY" secondItem="aAc-NZ-dlF" secondAttribute="centerY" id="QtW-It-rXD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sru-0Y-Ops" secondAttribute="trailing" constant="2" id="Tc7-s9-O7s"/>
+                                                    <constraint firstItem="sru-0Y-Ops" firstAttribute="leading" secondItem="aAc-NZ-dlF" secondAttribute="trailing" constant="2" id="llY-QT-Vwv"/>
+                                                    <constraint firstItem="aAc-NZ-dlF" firstAttribute="leading" secondItem="Hdc-EW-Reb" secondAttribute="leading" constant="2" id="rdB-Bm-apU"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="textField" destination="aAc-NZ-dlF" id="1CW-lt-YGl"/>
+                                                </connections>
+                                            </tableCellView>
+                                        </prototypeCellViews>
+                                    </tableColumn>
+                                </tableColumns>
+                                <connections>
+                                    <binding destination="vRa-j1-4Je" name="content" keyPath="arrangedObjects.self" id="5c1-kh-MRl"/>
+                                    <outlet property="delegate" destination="-2" id="2BU-dF-kUy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="cml-vN-0qg">
+                        <rect key="frame" x="1" y="119" width="223" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="kgJ-f6-En6">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <tableHeaderView key="headerView" id="LoW-rp-ovs">
+                        <rect key="frame" x="0.0" y="0.0" width="238" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tableHeaderView>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="aY0-V3-ESz" firstAttribute="leading" secondItem="HoO-bN-Ksz" secondAttribute="leading" id="3R3-tB-blm"/>
+                <constraint firstAttribute="trailing" secondItem="aY0-V3-ESz" secondAttribute="trailing" id="dZ7-Mv-EZT"/>
+                <constraint firstAttribute="bottom" secondItem="aY0-V3-ESz" secondAttribute="bottom" id="gRl-z2-s8d"/>
+                <constraint firstItem="aY0-V3-ESz" firstAttribute="top" secondItem="HoO-bN-Ksz" secondAttribute="top" id="vwl-ET-yDi"/>
+            </constraints>
+            <point key="canvasLocation" x="387.5" y="260.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+    </resources>
+</document>

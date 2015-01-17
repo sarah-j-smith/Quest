@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RoomDetailController" customModule="Quest" customModuleProvider="target">
+            <connections>
+                <outlet property="roomDetailObjectController" destination="Uad-u2-9NI" id="F2u-TH-4cA"/>
+                <outlet property="tabView" destination="6Rh-5f-sjs" id="fQR-ss-8r6"/>
+                <outlet property="view" destination="YFw-7c-vBV" id="1j8-u0-gNj"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="Room Details View" id="YFw-7c-vBV" userLabel="Room Details View">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="360"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KBN-7y-Gdm">
+                    <rect key="frame" x="14" y="312" width="162" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="8zO-sC-Pqb"/>
+                        <constraint firstAttribute="height" constant="21" id="aL7-dU-VS3"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Room Name" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" id="Ri5-qj-U0e">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="returnToRoomList:" target="-2" id="od5-BQ-ebJ"/>
+                        <binding destination="-2" name="title" keyPath="representedObject.roomName" id="gb2-9c-2SY"/>
+                    </connections>
+                </button>
+                <tabView translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-5f-sjs">
+                    <rect key="frame" x="13" y="10" width="614" height="306"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="290" id="fBx-uW-JNn"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="pis-Fx-5gh"/>
+                    </constraints>
+                    <font key="font" metaFont="system"/>
+                    <tabViewItems>
+                        <tabViewItem label="Description" identifier="Description" id="k9G-Lu-7mP" userLabel="Description">
+                            <view key="view" identifier="Description Tab View" id="W1g-vB-8fF" userLabel="Description Tab View">
+                                <rect key="frame" x="10" y="33" width="594" height="260"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="E6R-PL-FUR">
+                                        <rect key="frame" x="8" y="164" width="578" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="3Cq-cX-q8a"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="rru-cz-ns0">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="Uad-u2-9NI" name="value" keyPath="selection.roomDescription" id="uhs-Ao-atS"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="E6R-PL-FUR" firstAttribute="top" secondItem="W1g-vB-8fF" secondAttribute="top" constant="8" id="1Ls-ks-c3X"/>
+                                    <constraint firstAttribute="trailing" secondItem="E6R-PL-FUR" secondAttribute="trailing" constant="8" id="KZC-RQ-cSn"/>
+                                    <constraint firstItem="E6R-PL-FUR" firstAttribute="leading" secondItem="W1g-vB-8fF" secondAttribute="leading" constant="8" id="rsC-zk-jhN"/>
+                                </constraints>
+                            </view>
+                        </tabViewItem>
+                        <tabViewItem label="Objects" identifier="Objects" id="jIr-cG-pO8">
+                            <view key="view" id="Kpq-Xt-Nno">
+                                <rect key="frame" x="10" y="33" width="594" height="260"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </tabViewItem>
+                        <tabViewItem label="Exits" identifier="Exits" id="kk4-os-o4Y">
+                            <view key="view" id="t5C-jW-ESE">
+                                <rect key="frame" x="10" y="33" width="594" height="260"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </tabViewItem>
+                        <tabViewItem label="Images" identifier="Images" id="szN-ud-GNl">
+                            <view key="view" id="oS1-3h-36T">
+                                <rect key="frame" x="10" y="33" width="594" height="260"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </tabViewItem>
+                    </tabViewItems>
+                    <connections>
+                        <outlet property="delegate" destination="-2" id="GAR-YO-pbp"/>
+                    </connections>
+                </tabView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6Rh-5f-sjs" secondAttribute="bottom" constant="20" id="8PF-et-t7u"/>
+                <constraint firstItem="6Rh-5f-sjs" firstAttribute="leading" secondItem="YFw-7c-vBV" secondAttribute="leading" constant="20" id="BYd-eY-A3C"/>
+                <constraint firstItem="KBN-7y-Gdm" firstAttribute="top" secondItem="YFw-7c-vBV" secondAttribute="top" constant="20" id="PCu-gd-4IA"/>
+                <constraint firstAttribute="trailing" secondItem="6Rh-5f-sjs" secondAttribute="trailing" constant="20" id="drV-Om-Pu8"/>
+                <constraint firstItem="6Rh-5f-sjs" firstAttribute="top" secondItem="KBN-7y-Gdm" secondAttribute="bottom" constant="9" id="jIw-Ca-soT"/>
+                <constraint firstItem="KBN-7y-Gdm" firstAttribute="leading" secondItem="YFw-7c-vBV" secondAttribute="leading" constant="20" id="mAc-49-zqG"/>
+            </constraints>
+            <point key="canvasLocation" x="350" y="1167"/>
+        </customView>
+        <objectController objectClassName="Quest.RoomDetails" id="Uad-u2-9NI" userLabel="Room Detail Object Controller">
+            <declaredKeys>
+                <string>roomDescription</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="-2" name="contentObject" keyPath="representedObject.details" id="sPV-cU-ejw"/>
+            </connections>
+        </objectController>
+        <userDefaultsController representsSharedInstance="YES" id="qgV-oi-emj"/>
+    </objects>
+    <resources>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+    </resources>
+</document>

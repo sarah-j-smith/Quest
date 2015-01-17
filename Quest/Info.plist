@@ -12,17 +12,27 @@
 				<string>quest</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>SwiftQuestPlayer</string>
 			<key>CFBundleTypeName</key>
-			<string>DocumentType</string>
+			<string>Quest Document</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
-				<string>????</string>
+				<string>****</string>
 			</array>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>au.com.smithsoft.quest</string>
+			</array>
 			<key>NSDocumentClass</key>
-			<string>$(PRODUCT_MODULE_NAME).Document</string>
+			<string>Quest.Document</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSExportableTypes</key>
+			<array>
+				<string>au.com.smithsoft.quest</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
@@ -51,5 +61,27 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Quest Document</string>
+			<key>UTTypeIconFile</key>
+			<string>SwiftQuestPlayer</string>
+			<key>UTTypeIdentifier</key>
+			<string>au.com.smithsoft.quest</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>quest</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

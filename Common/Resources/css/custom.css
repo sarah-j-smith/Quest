@@ -1,0 +1,75 @@
+.plistpurple {
+    background-color: #57568c;
+}
+
+.orange_text {
+    color:#FF9000;
+    font-size:40px;
+}
+
+.plistlightpurple {
+    background-color:#CCCBFF;
+}
+
+.pencilbeige {
+    background-color: #C7BA81;
+    padding: 8px;
+}
+
+.breakoutbox {
+    background-color: #FCFCFC;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 16px;
+    padding: 22px;
+    border: 1px #AAAAAA solid;
+}
+
+.breakoutboxdark {
+    background-color: #222222;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 16px;
+    padding: 22px;
+    border: 1px #AAAAAA solid;
+}
+
+.roundbox {
+    background-color: #FCFCFC;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin: 4px;
+    padding: 4px;
+    border: 2px #222222 solid;
+}
+
+.plistback {
+    position: relative;
+    background: white url("../images/plistinator.png") no-repeat right center;
+}
+
+.full-width input {
+    width: 100%;
+}
+
+h1.audiowide {
+    font-family: 'Audiowide', cursive;
+}
+
+body {
+    /* background-color:#333333; */
+    background: url(background.jpg);
+    background-size: 1024px 1024px; */
+}
+
+/*div[class*="col-"] {*/
+/*/*    background-color:#F5F5DC; */
+/*    background-color:beige;*/
+/*}*/
+
+img {
+    margin-right: 15px;
+}

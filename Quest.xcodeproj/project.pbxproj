@@ -7,12 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F659C0281873F09200E7954F /* ExitsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659C0271873F09200E7954F /* ExitsListView.xib */; };
+		F671862F1A6338B7003732A9 /* ExitsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671862B1A6338B7003732A9 /* ExitsListViewController.swift */; };
+		F67186301A6338B7003732A9 /* FragmentValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671862C1A6338B7003732A9 /* FragmentValueFormatter.swift */; };
+		F67186311A6338B7003732A9 /* RoomDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671862D1A6338B7003732A9 /* RoomDetailController.swift */; };
+		F67186321A6338B7003732A9 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671862E1A6338B7003732A9 /* RoomListViewController.swift */; };
+		F67186361A633C8D003732A9 /* RoomListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67186351A633C8D003732A9 /* RoomListView.xib */; };
+		F67186381A63E7D0003732A9 /* NSViewController+Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67186371A63E7D0003732A9 /* NSViewController+Quest.swift */; };
 		F68388F21A62E5E70058A2B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68388F11A62E5E70058A2B8 /* AppDelegate.swift */; };
 		F68388F41A62E5E70058A2B8 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68388F31A62E5E70058A2B8 /* Document.swift */; };
 		F68388F71A62E5E70058A2B8 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68388F51A62E5E70058A2B8 /* Document.xib */; };
 		F68388F91A62E5E70058A2B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68388F81A62E5E70058A2B8 /* Images.xcassets */; };
 		F68388FC1A62E5E70058A2B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68388FA1A62E5E70058A2B8 /* MainMenu.xib */; };
 		F68389081A62E5E70058A2B8 /* QuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68389071A62E5E70058A2B8 /* QuestTests.swift */; };
+		F68389121A62E6B40058A2B8 /* SwiftQuestPlayer.icns in Resources */ = {isa = PBXBuildFile; fileRef = F68389111A62E6B40058A2B8 /* SwiftQuestPlayer.icns */; };
+		F68389281A62E8170058A2B8 /* libGRMustache7-MacOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F68389241A62E8170058A2B8 /* libGRMustache7-MacOS.a */; };
+		F68389501A62E8700058A2B8 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683892B1A62E8700058A2B8 /* GameObject.swift */; };
+		F68389511A62E8700058A2B8 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683892C1A62E8700058A2B8 /* GameState.swift */; };
+		F68389521A62E8700058A2B8 /* LinkDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683892D1A62E8700058A2B8 /* LinkDescription.swift */; };
+		F68389531A62E8700058A2B8 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683892E1A62E8700058A2B8 /* Room.swift */; };
+		F68389541A62E8700058A2B8 /* RoomDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683892F1A62E8700058A2B8 /* RoomDetails.swift */; };
+		F68389551A62E8700058A2B8 /* GradientButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68389301A62E8700058A2B8 /* GradientButtonCell.swift */; };
+		F68389561A62E8700058A2B8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68389311A62E8700058A2B8 /* GradientView.swift */; };
+		F68389571A62E8700058A2B8 /* QuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68389321A62E8700058A2B8 /* QuestView.swift */; };
+		F68389581A62E8700058A2B8 /* QuestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68389331A62E8700058A2B8 /* QuestView.xib */; };
+		F68389591A62E8700058A2B8 /* QuestViewWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68389341A62E8700058A2B8 /* QuestViewWindowController.swift */; };
+		F683895A1A62E8700058A2B8 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68389351A62E8700058A2B8 /* Renderer.swift */; };
+		F68389741A62E8A10058A2B8 /* css in Resources */ = {isa = PBXBuildFile; fileRef = F683896F1A62E8A10058A2B8 /* css */; };
+		F68389751A62E8A10058A2B8 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = F68389701A62E8A10058A2B8 /* fonts */; };
+		F68389761A62E8A10058A2B8 /* images in Resources */ = {isa = PBXBuildFile; fileRef = F68389711A62E8A10058A2B8 /* images */; };
+		F68389771A62E8A10058A2B8 /* js in Resources */ = {isa = PBXBuildFile; fileRef = F68389721A62E8A10058A2B8 /* js */; };
+		F68389781A62E8A10058A2B8 /* templates in Resources */ = {isa = PBXBuildFile; fileRef = F68389731A62E8A10058A2B8 /* templates */; };
+		F683897B1A62ECF40058A2B8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683897A1A62ECF40058A2B8 /* RootViewController.swift */; };
+		F683897D1A62EEFC0058A2B8 /* GameStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683897C1A62EEFC0058A2B8 /* GameStateViewController.swift */; };
+		F683897F1A62F1260058A2B8 /* GameState.xib in Resources */ = {isa = PBXBuildFile; fileRef = F683897E1A62F1260058A2B8 /* GameState.xib */; };
+		F6D49ED71873993400C15021 /* RoomDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D49ED61873993400C15021 /* RoomDetailView.xib */; };
+		F6DBEA811A648A3B00178E00 /* QuestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBEA801A648A3B00178E00 /* QuestController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F659C0271873F09200E7954F /* ExitsListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExitsListView.xib; sourceTree = "<group>"; };
+		F671862B1A6338B7003732A9 /* ExitsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitsListViewController.swift; sourceTree = "<group>"; };
+		F671862C1A6338B7003732A9 /* FragmentValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FragmentValueFormatter.swift; sourceTree = "<group>"; };
+		F671862D1A6338B7003732A9 /* RoomDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailController.swift; sourceTree = "<group>"; };
+		F671862E1A6338B7003732A9 /* RoomListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
+		F67186351A633C8D003732A9 /* RoomListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomListView.xib; sourceTree = "<group>"; };
+		F67186371A63E7D0003732A9 /* NSViewController+Quest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSViewController+Quest.swift"; sourceTree = "<group>"; };
 		F68388EC1A62E5E70058A2B8 /* Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68388F01A62E5E70058A2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68388F11A62E5E70058A2B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +73,48 @@
 		F68389011A62E5E70058A2B8 /* QuestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68389061A62E5E70058A2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68389071A62E5E70058A2B8 /* QuestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTests.swift; sourceTree = "<group>"; };
+		F68389111A62E6B40058A2B8 /* SwiftQuestPlayer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SwiftQuestPlayer.icns; sourceTree = "<group>"; };
+		F68389141A62E8170058A2B8 /* GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustache.h; sourceTree = "<group>"; };
+		F68389151A62E8170058A2B8 /* GRMustacheAvailabilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheAvailabilityMacros.h; sourceTree = "<group>"; };
+		F68389161A62E8170058A2B8 /* GRMustacheConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheConfiguration.h; sourceTree = "<group>"; };
+		F68389171A62E8170058A2B8 /* GRMustacheContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheContentType.h; sourceTree = "<group>"; };
+		F68389181A62E8170058A2B8 /* GRMustacheContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheContext.h; sourceTree = "<group>"; };
+		F68389191A62E8170058A2B8 /* GRMustacheError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheError.h; sourceTree = "<group>"; };
+		F683891A1A62E8170058A2B8 /* GRMustacheFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheFilter.h; sourceTree = "<group>"; };
+		F683891B1A62E8170058A2B8 /* GRMustacheLocalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheLocalizer.h; sourceTree = "<group>"; };
+		F683891C1A62E8170058A2B8 /* GRMustacheRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheRendering.h; sourceTree = "<group>"; };
+		F683891D1A62E8170058A2B8 /* GRMustacheSafeKeyAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheSafeKeyAccess.h; sourceTree = "<group>"; };
+		F683891E1A62E8170058A2B8 /* GRMustacheTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTag.h; sourceTree = "<group>"; };
+		F683891F1A62E8170058A2B8 /* GRMustacheTagDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTagDelegate.h; sourceTree = "<group>"; };
+		F68389201A62E8170058A2B8 /* GRMustacheTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTemplate.h; sourceTree = "<group>"; };
+		F68389211A62E8170058A2B8 /* GRMustacheTemplateRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTemplateRepository.h; sourceTree = "<group>"; };
+		F68389221A62E8170058A2B8 /* GRMustacheVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheVersion.h; sourceTree = "<group>"; };
+		F68389231A62E8170058A2B8 /* libGRMustache7-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGRMustache7-iOS.a"; sourceTree = "<group>"; };
+		F68389241A62E8170058A2B8 /* libGRMustache7-MacOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGRMustache7-MacOS.a"; sourceTree = "<group>"; };
+		F68389251A62E8170058A2B8 /* NSFormatter+GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFormatter+GRMustache.h"; sourceTree = "<group>"; };
+		F68389261A62E8170058A2B8 /* NSValueTransformer+GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+GRMustache.h"; sourceTree = "<group>"; };
+		F683892B1A62E8700058A2B8 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		F683892C1A62E8700058A2B8 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		F683892D1A62E8700058A2B8 /* LinkDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkDescription.swift; sourceTree = "<group>"; };
+		F683892E1A62E8700058A2B8 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		F683892F1A62E8700058A2B8 /* RoomDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetails.swift; sourceTree = "<group>"; };
+		F68389301A62E8700058A2B8 /* GradientButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButtonCell.swift; sourceTree = "<group>"; };
+		F68389311A62E8700058A2B8 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F68389321A62E8700058A2B8 /* QuestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestView.swift; sourceTree = "<group>"; };
+		F68389331A62E8700058A2B8 /* QuestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestView.xib; sourceTree = "<group>"; };
+		F68389341A62E8700058A2B8 /* QuestViewWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestViewWindowController.swift; sourceTree = "<group>"; };
+		F68389351A62E8700058A2B8 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		F683896F1A62E8A10058A2B8 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
+		F68389701A62E8A10058A2B8 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		F68389711A62E8A10058A2B8 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		F68389721A62E8A10058A2B8 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		F68389731A62E8A10058A2B8 /* templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = templates; sourceTree = "<group>"; };
+		F68389791A62E9FD0058A2B8 /* Quest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quest-Bridging-Header.h"; sourceTree = "<group>"; };
+		F683897A1A62ECF40058A2B8 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		F683897C1A62EEFC0058A2B8 /* GameStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStateViewController.swift; sourceTree = "<group>"; };
+		F683897E1A62F1260058A2B8 /* GameState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameState.xib; sourceTree = "<group>"; };
+		F6D49ED61873993400C15021 /* RoomDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomDetailView.xib; sourceTree = "<group>"; };
+		F6DBEA801A648A3B00178E00 /* QuestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68389281A62E8170058A2B8 /* libGRMustache7-MacOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +139,8 @@
 		F68388E31A62E5E60058A2B8 = {
 			isa = PBXGroup;
 			children = (
+				F68389291A62E8700058A2B8 /* Common */,
+				F68389131A62E8170058A2B8 /* GRMustache */,
 				F68388EE1A62E5E70058A2B8 /* Quest */,
 				F68389041A62E5E70058A2B8 /* QuestTests */,
 				F68388ED1A62E5E70058A2B8 /* Products */,
@@ -80,6 +162,19 @@
 				F68388F11A62E5E70058A2B8 /* AppDelegate.swift */,
 				F68388F31A62E5E70058A2B8 /* Document.swift */,
 				F68388F51A62E5E70058A2B8 /* Document.xib */,
+				F6DBEA801A648A3B00178E00 /* QuestController.swift */,
+				F683897A1A62ECF40058A2B8 /* RootViewController.swift */,
+				F683897C1A62EEFC0058A2B8 /* GameStateViewController.swift */,
+				F683897E1A62F1260058A2B8 /* GameState.xib */,
+				F671862E1A6338B7003732A9 /* RoomListViewController.swift */,
+				F67186351A633C8D003732A9 /* RoomListView.xib */,
+				F671862D1A6338B7003732A9 /* RoomDetailController.swift */,
+				F6D49ED61873993400C15021 /* RoomDetailView.xib */,
+				F659C0271873F09200E7954F /* ExitsListView.xib */,
+				F671862B1A6338B7003732A9 /* ExitsListViewController.swift */,
+				F671862C1A6338B7003732A9 /* FragmentValueFormatter.swift */,
+				F67186371A63E7D0003732A9 /* NSViewController+Quest.swift */,
+				F68389111A62E6B40058A2B8 /* SwiftQuestPlayer.icns */,
 				F68388F81A62E5E70058A2B8 /* Images.xcassets */,
 				F68388FA1A62E5E70058A2B8 /* MainMenu.xib */,
 				F68388EF1A62E5E70058A2B8 /* Supporting Files */,
@@ -90,6 +185,7 @@
 		F68388EF1A62E5E70058A2B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F68389791A62E9FD0058A2B8 /* Quest-Bridging-Header.h */,
 				F68388F01A62E5E70058A2B8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +206,71 @@
 				F68389061A62E5E70058A2B8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F68389131A62E8170058A2B8 /* GRMustache */ = {
+			isa = PBXGroup;
+			children = (
+				F68389141A62E8170058A2B8 /* GRMustache.h */,
+				F68389151A62E8170058A2B8 /* GRMustacheAvailabilityMacros.h */,
+				F68389161A62E8170058A2B8 /* GRMustacheConfiguration.h */,
+				F68389171A62E8170058A2B8 /* GRMustacheContentType.h */,
+				F68389181A62E8170058A2B8 /* GRMustacheContext.h */,
+				F68389191A62E8170058A2B8 /* GRMustacheError.h */,
+				F683891A1A62E8170058A2B8 /* GRMustacheFilter.h */,
+				F683891B1A62E8170058A2B8 /* GRMustacheLocalizer.h */,
+				F683891C1A62E8170058A2B8 /* GRMustacheRendering.h */,
+				F683891D1A62E8170058A2B8 /* GRMustacheSafeKeyAccess.h */,
+				F683891E1A62E8170058A2B8 /* GRMustacheTag.h */,
+				F683891F1A62E8170058A2B8 /* GRMustacheTagDelegate.h */,
+				F68389201A62E8170058A2B8 /* GRMustacheTemplate.h */,
+				F68389211A62E8170058A2B8 /* GRMustacheTemplateRepository.h */,
+				F68389221A62E8170058A2B8 /* GRMustacheVersion.h */,
+				F68389231A62E8170058A2B8 /* libGRMustache7-iOS.a */,
+				F68389241A62E8170058A2B8 /* libGRMustache7-MacOS.a */,
+				F68389251A62E8170058A2B8 /* NSFormatter+GRMustache.h */,
+				F68389261A62E8170058A2B8 /* NSValueTransformer+GRMustache.h */,
+			);
+			path = GRMustache;
+			sourceTree = "<group>";
+		};
+		F68389291A62E8700058A2B8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F68389361A62E8700058A2B8 /* Resources */,
+				F683892A1A62E8700058A2B8 /* AdventureModel */,
+				F68389301A62E8700058A2B8 /* GradientButtonCell.swift */,
+				F68389311A62E8700058A2B8 /* GradientView.swift */,
+				F68389321A62E8700058A2B8 /* QuestView.swift */,
+				F68389331A62E8700058A2B8 /* QuestView.xib */,
+				F68389341A62E8700058A2B8 /* QuestViewWindowController.swift */,
+				F68389351A62E8700058A2B8 /* Renderer.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F683892A1A62E8700058A2B8 /* AdventureModel */ = {
+			isa = PBXGroup;
+			children = (
+				F683892B1A62E8700058A2B8 /* GameObject.swift */,
+				F683892C1A62E8700058A2B8 /* GameState.swift */,
+				F683892D1A62E8700058A2B8 /* LinkDescription.swift */,
+				F683892E1A62E8700058A2B8 /* Room.swift */,
+				F683892F1A62E8700058A2B8 /* RoomDetails.swift */,
+			);
+			path = AdventureModel;
+			sourceTree = "<group>";
+		};
+		F68389361A62E8700058A2B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F683896F1A62E8A10058A2B8 /* css */,
+				F68389701A62E8A10058A2B8 /* fonts */,
+				F68389711A62E8A10058A2B8 /* images */,
+				F68389721A62E8A10058A2B8 /* js */,
+				F68389731A62E8A10058A2B8 /* templates */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +322,7 @@
 				TargetAttributes = {
 					F68388EB1A62E5E70058A2B8 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 4563WH9VE2;
 					};
 					F68389001A62E5E70058A2B8 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -192,8 +354,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68389741A62E8A10058A2B8 /* css in Resources */,
+				F68389771A62E8A10058A2B8 /* js in Resources */,
+				F68389121A62E6B40058A2B8 /* SwiftQuestPlayer.icns in Resources */,
 				F68388F71A62E5E70058A2B8 /* Document.xib in Resources */,
+				F68389781A62E8A10058A2B8 /* templates in Resources */,
+				F67186361A633C8D003732A9 /* RoomListView.xib in Resources */,
+				F659C0281873F09200E7954F /* ExitsListView.xib in Resources */,
+				F68389751A62E8A10058A2B8 /* fonts in Resources */,
+				F6D49ED71873993400C15021 /* RoomDetailView.xib in Resources */,
+				F68389761A62E8A10058A2B8 /* images in Resources */,
 				F68388F91A62E5E70058A2B8 /* Images.xcassets in Resources */,
+				F683897F1A62F1260058A2B8 /* GameState.xib in Resources */,
+				F68389581A62E8700058A2B8 /* QuestView.xib in Resources */,
 				F68388FC1A62E5E70058A2B8 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +386,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68388F41A62E5E70058A2B8 /* Document.swift in Sources */,
+				F68389541A62E8700058A2B8 /* RoomDetails.swift in Sources */,
+				F68389511A62E8700058A2B8 /* GameState.swift in Sources */,
+				F68389571A62E8700058A2B8 /* QuestView.swift in Sources */,
+				F683897B1A62ECF40058A2B8 /* RootViewController.swift in Sources */,
+				F67186381A63E7D0003732A9 /* NSViewController+Quest.swift in Sources */,
+				F683895A1A62E8700058A2B8 /* Renderer.swift in Sources */,
+				F68389531A62E8700058A2B8 /* Room.swift in Sources */,
+				F68389591A62E8700058A2B8 /* QuestViewWindowController.swift in Sources */,
 				F68388F21A62E5E70058A2B8 /* AppDelegate.swift in Sources */,
+				F67186321A6338B7003732A9 /* RoomListViewController.swift in Sources */,
+				F671862F1A6338B7003732A9 /* ExitsListViewController.swift in Sources */,
+				F68389551A62E8700058A2B8 /* GradientButtonCell.swift in Sources */,
+				F68389521A62E8700058A2B8 /* LinkDescription.swift in Sources */,
+				F6DBEA811A648A3B00178E00 /* QuestController.swift in Sources */,
+				F67186301A6338B7003732A9 /* FragmentValueFormatter.swift in Sources */,
+				F67186311A6338B7003732A9 /* RoomDetailController.swift in Sources */,
+				F68389501A62E8700058A2B8 /* GameObject.swift in Sources */,
+				F683897D1A62EEFC0058A2B8 /* GameStateViewController.swift in Sources */,
+				F68389561A62E8700058A2B8 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +530,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Quest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GRMustache",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Quest/Quest-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -350,7 +547,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Quest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GRMustache",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Quest/Quest-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +612,7 @@
 				F683890D1A62E5E70058A2B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F683890E1A62E5E70058A2B8 /* Build configuration list for PBXNativeTarget "QuestTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +621,7 @@
 				F68389101A62E5E70058A2B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

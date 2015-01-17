@@ -8,19 +8,29 @@
 
 import Cocoa
 
-class Document: NSDocument {
-
-    override init() {
+class Document: NSDocument
+{    
+    @IBOutlet var rootViewController : RootViewController!
+    @IBOutlet var loadingLabel : NSTextField!
+    
+    var gameState = GameState()
+    
+    override init()
+    {
         super.init()
         // Add your subclass-specific initialization here.
     }
 
-    override func windowControllerDidLoadNib(aController: NSWindowController) {
+    override func windowControllerDidLoadNib(aController: NSWindowController)
+    {
         super.windowControllerDidLoadNib(aController)
-        // Add any code here that needs to be executed once the windowController has loaded the document's window.
+        let gsvc = rootViewController.gameStateViewController
+        gsvc.representedObject = gameState
+        loadingLabel.hidden = true
     }
 
-    override class func autosavesInPlace() -> Bool {
+    override class func autosavesInPlace() -> Bool
+    {
         return true
     }
 
@@ -33,18 +43,42 @@ class Document: NSDocument {
     override func dataOfType(typeName: String, error outError: NSErrorPointer) -> NSData? {
         // Insert code here to write your document to data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning nil.
         // You can also choose to override fileWrapperOfType:error:, writeToURL:ofType:error:, or writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-        outError.memory = NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
-        return nil
+        return NSKeyedArchiver.archivedDataWithRootObject(gameState)
+        
+        //        outError.memory = NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+        //        return nil
     }
 
     override func readFromData(data: NSData, ofType typeName: String, error outError: NSErrorPointer) -> Bool {
         // Insert code here to read your document from the given data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning false.
         // You can also choose to override readFromFileWrapper:ofType:error: or readFromURL:ofType:error: instead.
         // If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
-        outError.memory = NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
-        return false
+//        outError.memory = NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+//        return false
+        NSLog("readFromData: \(typeName)")
+        if let gameStateObject: AnyObject = NSKeyedUnarchiver.unarchiveObjectWithData(data)
+        {
+            gameState = gameStateObject as GameState
+        }
+        else
+        {
+            let errorMessage = "Failed to load"
+            NSLog("#### \(errorMessage)")
+            outError.memory = NSError(domain: NSOSStatusErrorDomain, code: readErr,
+                userInfo: [ NSLocalizedDescriptionKey : errorMessage])
+            return false
+        }
+        NSLog("Loaded: \(gameState)")
+        return true
     }
-
-
+    
+    override func prepareSavePanel(savePanel: NSSavePanel) -> Bool
+    {
+        if (gameState.gameName != "Game Title")
+        {
+            savePanel.nameFieldStringValue = gameState.gameName
+        }
+        return true
+    }
 }
 

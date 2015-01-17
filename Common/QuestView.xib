@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="QuestViewWindowController" customModule="Quest" customModuleProvider="target">
+            <connections>
+                <outlet property="questViewController" destination="NgH-3D-v21" id="Ids-Oy-iad"/>
+                <outlet property="window" destination="scS-zd-IQc" id="Ete-cY-JsC"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="QuestView Window" animationBehavior="default" id="scS-zd-IQc">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="131" y="158" width="600" height="415"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="Ugt-4D-pkM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="415"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <webView translatesAutoresizingMaskIntoConstraints="NO" id="6BP-tz-5nC">
+                        <rect key="frame" x="0.0" y="28" width="600" height="387"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="387" id="Jmd-CO-if5"/>
+                        </constraints>
+                        <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                            <nil key="identifier"/>
+                        </webPreferences>
+                        <connections>
+                            <outlet property="downloadDelegate" destination="NgH-3D-v21" id="w1w-dP-cMk"/>
+                            <outlet property="frameLoadDelegate" destination="NgH-3D-v21" id="TTV-0T-fCs"/>
+                            <outlet property="policyDelegate" destination="NgH-3D-v21" id="c8n-1y-PXL"/>
+                            <outlet property="resourceLoadDelegate" destination="NgH-3D-v21" id="eIu-jx-szb"/>
+                        </connections>
+                    </webView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="2E1-aB-H3e" customClass="GradientView" customModule="Quest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="28"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-RE-z0Q">
+                                <rect key="frame" x="22" y="-1" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="den-kW-O02"/>
+                                    <constraint firstAttribute="width" constant="32" id="loF-T1-aen"/>
+                                </constraints>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSActionTemplate" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="98i-my-Pur" customClass="GradientButtonCell" customModule="Quest" customModuleProvider="target">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                            <color key="value" red="0.94634841160220995" green="0.94634841160220995" blue="0.94634841160220995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                            <color key="value" red="0.81900203230000002" green="0.81897753480000002" blue="0.81899142270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="gaJ-RE-z0Q" firstAttribute="top" secondItem="2E1-aB-H3e" secondAttribute="top" id="J8S-UM-P1x"/>
+                            <constraint firstItem="gaJ-RE-z0Q" firstAttribute="leading" secondItem="2E1-aB-H3e" secondAttribute="leading" constant="22" id="K3m-qj-QNz"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="Q77-Rj-xtZ"/>
+                            <constraint firstAttribute="bottom" secondItem="gaJ-RE-z0Q" secondAttribute="bottom" id="SBX-hC-feo"/>
+                            <constraint firstAttribute="height" constant="28" id="k8W-Hn-Qb7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.96585808011049723" green="0.96585808011049723" blue="0.96585808011049723" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.81900203230000002" green="0.81897753480000002" blue="0.81899142270000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2E1-aB-H3e" firstAttribute="leading" secondItem="Ugt-4D-pkM" secondAttribute="leading" id="187-vN-aPy"/>
+                    <constraint firstItem="6BP-tz-5nC" firstAttribute="leading" secondItem="Ugt-4D-pkM" secondAttribute="leading" id="6jh-9C-Tll"/>
+                    <constraint firstAttribute="bottom" secondItem="2E1-aB-H3e" secondAttribute="bottom" id="8Wc-GS-0cH"/>
+                    <constraint firstItem="6BP-tz-5nC" firstAttribute="top" secondItem="Ugt-4D-pkM" secondAttribute="top" id="arL-Q0-5aV"/>
+                    <constraint firstItem="2E1-aB-H3e" firstAttribute="top" secondItem="6BP-tz-5nC" secondAttribute="bottom" id="rFE-SD-QSN"/>
+                    <constraint firstAttribute="trailing" secondItem="2E1-aB-H3e" secondAttribute="trailing" id="w5E-1Q-VpW"/>
+                    <constraint firstAttribute="trailing" secondItem="6BP-tz-5nC" secondAttribute="trailing" id="zAO-RX-mxd"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="Uhy-U9-tYW"/>
+            </connections>
+            <point key="canvasLocation" x="82" y="473"/>
+        </window>
+        <viewController id="NgH-3D-v21" customClass="QuestView" customModule="Quest" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Ugt-4D-pkM" id="K09-fn-JGc"/>
+                <outlet property="webView" destination="6BP-tz-5nC" id="OE0-BS-tOY"/>
+            </connections>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+    </resources>
+</document>
