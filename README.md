@@ -52,3 +52,31 @@ Although the rendering system is HTML/CSS and a theming engine is
 planned, the state-engine is in Swift and thus creating a web-based
 version is not immediately on the cards.
 
+
+Screenshots
+-----------
+
+![Game Title](game-title.png "Game Title")
+
+Click the disclosure triangle to edit the title of the game.  Click the
+right-arrow to go ahead and edit the game content, via the rooms list.
+
+![Rooms List](room-list.png "Rooms List")
+
+List rooms by their names.  Each room also has to have a unique key
+string, which needs to be a HTML-fragment safe string.  If you enter
+letters in this key string field hyphens will be inserted automatically
+by a formatter for illegal characters.  The plain-text (without the
+hyphens) will be copied to the Room Name field.
+
+![Description](description.png "Description")
+
+Enter the description here for the room.  The other tabs are not yet implemented.
+
+![Player](player.png "Player")
+
+
+Currently the player can only show the start room and its description
+because exits are not yet implemented.  Previous versions of the HTML
+player (which used the Markdown file format) did work, and pressing the
+CSS buttons for eg "North" or "Outside" would move from room to room.
