@@ -7,8 +7,10 @@ Experimental Interactive Fiction editor/player for Mac.
 Status
 ------
 
-Can create rooms and descriptions, displays basic room in a webview
-player.  Not really useable in its current state.
+Can create rooms and descriptions, and exits that lead from one room
+to the next.  Displays rooms and accepts button press commands to move
+to a new room via an exit.  Starting to be a be interesting but not 
+yet useful for a real game.
 
 
 Background
@@ -83,7 +85,7 @@ room, the action type and name performed eg "move" and "North".
 This is a screenshot of the Player application rendering a room, with its
 title, description and buttons for the exits.
 
-![Move to new Room](move-to-new-room.png "Moved")
+![Move to new Room](moved-to-new-room.png "Moved")
 
 This shows the display of the Player, just after pressing a button for one
 of the exits from a previous room.  The view for the new room is
