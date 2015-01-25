@@ -10,9 +10,17 @@ import Foundation
 
 class GameState : NSObject, NSCoding, Printable
 {
-    var gameName = "Game Title"
+    var gameName : String {
+        didSet {
+            NSLog("gameName: \(gameName)")
+        }
+    }
     
-    var rooms = [ Room() ]
+    var rooms : [ Room ] {
+        didSet {
+            NSLog("rooms array changed, from \(oldValue.count) > \(rooms.count) room/s")
+        }
+    }
     
     override var description : String {
         get {
@@ -22,6 +30,8 @@ class GameState : NSObject, NSCoding, Printable
     
     override init()
     {
+        gameName = "Game Title"
+        rooms = [ Room() ]
         super.init()
         rooms[0].details = RoomDetails()
         rooms[0].details.objects.append(GameObject(objectName: "Player"))

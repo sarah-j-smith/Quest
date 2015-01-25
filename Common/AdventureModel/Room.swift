@@ -52,10 +52,7 @@ class Room : NSObject, NSCoding, Printable
         {
             fatalError("Cannot create room with empty name")
         }
-        let allNameChars = NSRange(location: 0, length: len)
-        let validCharsRegex = NSRegularExpression(pattern: "[\\P{L}]", options: nil, error: nil)!
-        let key = validCharsRegex.stringByReplacingMatchesInString(name, options: nil, range: allNameChars, withTemplate: "-")
-        self.init(key: key, name: name)
+        self.init(key: name.keySafe(), name: name)
     }
     
     func encodeWithCoder(aCoder: NSCoder) {

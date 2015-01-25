@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F624417A1A73470300EBB13B /* StatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62441791A73470300EBB13B /* StatesManager.swift */; };
+		F624417C1A738A3600EBB13B /* String+Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624417B1A738A3600EBB13B /* String+Quest.swift */; };
+		F624417F1A7486A400EBB13B /* Adventure-Editor.icns in Resources */ = {isa = PBXBuildFile; fileRef = F624417D1A7486A400EBB13B /* Adventure-Editor.icns */; };
+		F62441801A7486A400EBB13B /* Adventure-House.icns in Resources */ = {isa = PBXBuildFile; fileRef = F624417E1A7486A400EBB13B /* Adventure-House.icns */; };
 		F659C0281873F09200E7954F /* ExitsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659C0271873F09200E7954F /* ExitsListView.xib */; };
 		F671862F1A6338B7003732A9 /* ExitsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671862B1A6338B7003732A9 /* ExitsListViewController.swift */; };
 		F67186301A6338B7003732A9 /* FragmentValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671862C1A6338B7003732A9 /* FragmentValueFormatter.swift */; };
@@ -56,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F62441791A73470300EBB13B /* StatesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatesManager.swift; sourceTree = "<group>"; };
+		F624417B1A738A3600EBB13B /* String+Quest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Quest.swift"; sourceTree = "<group>"; };
+		F624417D1A7486A400EBB13B /* Adventure-Editor.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Adventure-Editor.icns"; sourceTree = "<group>"; };
+		F624417E1A7486A400EBB13B /* Adventure-House.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Adventure-House.icns"; sourceTree = "<group>"; };
 		F659C0271873F09200E7954F /* ExitsListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExitsListView.xib; sourceTree = "<group>"; };
 		F671862B1A6338B7003732A9 /* ExitsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitsListViewController.swift; sourceTree = "<group>"; };
 		F671862C1A6338B7003732A9 /* FragmentValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FragmentValueFormatter.swift; sourceTree = "<group>"; };
@@ -174,6 +182,8 @@
 				F671862B1A6338B7003732A9 /* ExitsListViewController.swift */,
 				F671862C1A6338B7003732A9 /* FragmentValueFormatter.swift */,
 				F67186371A63E7D0003732A9 /* NSViewController+Quest.swift */,
+				F624417D1A7486A400EBB13B /* Adventure-Editor.icns */,
+				F624417E1A7486A400EBB13B /* Adventure-House.icns */,
 				F68389111A62E6B40058A2B8 /* SwiftQuestPlayer.icns */,
 				F68388F81A62E5E70058A2B8 /* Images.xcassets */,
 				F68388FA1A62E5E70058A2B8 /* MainMenu.xib */,
@@ -242,9 +252,11 @@
 				F68389301A62E8700058A2B8 /* GradientButtonCell.swift */,
 				F68389311A62E8700058A2B8 /* GradientView.swift */,
 				F68389321A62E8700058A2B8 /* QuestView.swift */,
+				F62441791A73470300EBB13B /* StatesManager.swift */,
 				F68389331A62E8700058A2B8 /* QuestView.xib */,
 				F68389341A62E8700058A2B8 /* QuestViewWindowController.swift */,
 				F68389351A62E8700058A2B8 /* Renderer.swift */,
+				F624417B1A738A3600EBB13B /* String+Quest.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -354,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F624417F1A7486A400EBB13B /* Adventure-Editor.icns in Resources */,
 				F68389741A62E8A10058A2B8 /* css in Resources */,
 				F68389771A62E8A10058A2B8 /* js in Resources */,
 				F68389121A62E6B40058A2B8 /* SwiftQuestPlayer.icns in Resources */,
@@ -367,6 +380,7 @@
 				F68388F91A62E5E70058A2B8 /* Images.xcassets in Resources */,
 				F683897F1A62F1260058A2B8 /* GameState.xib in Resources */,
 				F68389581A62E8700058A2B8 /* QuestView.xib in Resources */,
+				F62441801A7486A400EBB13B /* Adventure-House.icns in Resources */,
 				F68388FC1A62E5E70058A2B8 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +411,8 @@
 				F68388F21A62E5E70058A2B8 /* AppDelegate.swift in Sources */,
 				F67186321A6338B7003732A9 /* RoomListViewController.swift in Sources */,
 				F671862F1A6338B7003732A9 /* ExitsListViewController.swift in Sources */,
+				F624417C1A738A3600EBB13B /* String+Quest.swift in Sources */,
+				F624417A1A73470300EBB13B /* StatesManager.swift in Sources */,
 				F68389551A62E8700058A2B8 /* GradientButtonCell.swift in Sources */,
 				F68389521A62E8700058A2B8 /* LinkDescription.swift in Sources */,
 				F6DBEA811A648A3B00178E00 /* QuestController.swift in Sources */,

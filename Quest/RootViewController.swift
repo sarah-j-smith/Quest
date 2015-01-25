@@ -91,21 +91,6 @@ class RootViewController : NSViewController
             let data = NSKeyedArchiver.archivedDataWithRootObject(gs)
             let qv = questWindow.questViewController
             qv.model = NSKeyedUnarchiver.unarchiveObjectWithData(data) as GameState
-            if qv.currentRoom == nil
-            {
-                for rm in qv.model.rooms
-                {
-                    if rm.details.isCurrentRoom()
-                    {
-                        qv.currentRoom = rm
-                        break
-                    }
-                }
-            }
-            if qv.currentRoom == nil
-            {
-                qv.currentRoom = qv.model.rooms.first
-            }
             qv.refreshView()
         }
         else

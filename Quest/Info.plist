@@ -12,7 +12,7 @@
 				<string>quest</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>SwiftQuestPlayer</string>
+			<string>Adventure-House</string>
 			<key>CFBundleTypeName</key>
 			<string>Quest Document</string>
 			<key>CFBundleTypeOSTypes</key>
@@ -25,10 +25,10 @@
 			<array>
 				<string>au.com.smithsoft.quest</string>
 			</array>
-			<key>NSDocumentClass</key>
-			<string>Quest.Document</string>
 			<key>LSTypeIsPackage</key>
 			<false/>
+			<key>NSDocumentClass</key>
+			<string>Quest.Document</string>
 			<key>NSExportableTypes</key>
 			<array>
 				<string>au.com.smithsoft.quest</string>
@@ -71,7 +71,7 @@
 			<key>UTTypeDescription</key>
 			<string>Quest Document</string>
 			<key>UTTypeIconFile</key>
-			<string>SwiftQuestPlayer</string>
+			<string>Adventure-House</string>
 			<key>UTTypeIdentifier</key>
 			<string>au.com.smithsoft.quest</string>
 			<key>UTTypeTagSpecification</key>

@@ -10,10 +10,10 @@ import Foundation
 
 class RoomDetails : NSObject, NSCoding, Printable
 {
-    var roomKey = "Unnamed-Room"
-    var roomDescription = "Nothing special"
-    var objects = [ GameObject ]()
-    var exits = [ LinkDescription ]()
+    dynamic var roomKey = "Unnamed-Room"
+    dynamic var roomDescription = "Nothing special"
+    dynamic var objects = [ GameObject ]()
+    dynamic var exits = [ LinkDescription ]()
     
     override init() {
         super.init()

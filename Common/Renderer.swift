@@ -14,6 +14,13 @@ class Renderer
     
     let htmlPage : GRMustacheTemplate
     
+    private var _pageTitle : String?
+    private var _bodyTextParagraphs : [ String ]?
+    private var _buttonAssembly : [ LinkDescription ]?
+    private var _codaParagrahps : [ String ]?
+    private var _javascriptEntries : [ String ]?
+    private var _popoverFields : [ String : String ]?
+    
     init() {
         let bundle = NSBundle(forClass: Renderer.self)
         let path = bundle.pathForResource("templates/template", ofType: "html")!
@@ -21,13 +28,53 @@ class Renderer
         htmlPage = GRMustacheTemplate(fromContentsOfFile: path, error: &err)
     }
     
-    func htmlTemplate( htmlTitle: String, bodyText: String, buttons: [ LinkDescription ] = []) -> String
+// MARK: HTML generation
+    
+    /** Return a string of HTML for the renderers current state as set up by earlier calls to setTitle and other page-model accessors.  Will reset the page-model to empty. */
+    func html() -> String
     {
-        let buttonLinks = buttons.map { lnk in self.createLinkButton(lnk) }
-        let navLinks = buttons.map { lnk in self.createNavButton(lnk) }
-        let btns = "".join(buttonLinks)
-        let result = htmlPage.renderObject( [ "title" : htmlTitle, "header" : htmlTitle,
-            "content" : bodyText, "buttons" : btns ], error: nil )
+        var templateFields = [ "header" : "Untitled", "content" : "Nothing special." ]
+        if let title = _pageTitle
+        {
+            templateFields["header"] = title
+            _pageTitle = nil
+        }
+        if let bodyText = _bodyTextParagraphs
+        {
+            templateFields["content"] = htmlParagraphs(bodyText)
+            _bodyTextParagraphs = nil
+        }
+        if let buttons = _buttonAssembly
+        {
+            let buttonLinks = buttons.map { lnk in self.createLinkButton(lnk) }
+            let btns = "".join(buttonLinks)
+            templateFields["buttons"] = btns
+            _buttonAssembly = nil
+        }
+        if let popover = _popoverFields
+        {
+            let popoverHTML = render(templateName: "popover", withObject: popover)
+            addCodaParagraph(popoverHTML)
+            addJavascript("$('#myModal').modal('show');")
+            _popoverFields = nil
+        }
+        if let coda = _codaParagrahps
+        {
+            templateFields["coda"] = htmlParagraphs(coda)
+            _codaParagrahps = nil
+        }
+        if let javascriptTexts = _javascriptEntries
+        {
+            templateFields["javascriptText"] = "\n".join(javascriptTexts)
+        }
+        var errorReport : NSError?
+        let result = htmlPage.renderObject(templateFields, error: &errorReport)
+        if let err = errorReport
+        {
+            NSLog("%@", templateFields)
+            NSLog("Rendering failed: \(err.localizedDescription)")
+            return "<html><body><h1>Error</h1><p>\(err.localizedDescription)</p></body></html>"
+        }
         return result
     }
     
@@ -50,6 +97,70 @@ class Renderer
         }
         return nil
     }
+    
+// MARK: Page model accessors
+    
+    func setPageTitle(pageTitle: String)
+    {
+        _pageTitle = pageTitle
+    }
+    
+    func addBodyParagraphs(paragraphs: [ String ])
+    {
+        if _bodyTextParagraphs == nil
+        {
+            _bodyTextParagraphs = paragraphs
+        }
+        else
+        {
+            _bodyTextParagraphs!.extend(paragraphs)
+        }
+    }
+    
+    func addButtonLinks(linkArray: [ LinkDescription ])
+    {
+        if _buttonAssembly == nil
+        {
+            _buttonAssembly = linkArray
+        }
+        else
+        {
+            _buttonAssembly!.extend(linkArray)
+        }
+    }
+    
+    func addCodaParagraph(coda: String)
+    {
+        if _codaParagrahps == nil
+        {
+            _codaParagrahps = [ coda ]
+        }
+        else
+        {
+            _codaParagrahps!.append(coda)
+        }
+    }
+    
+    /** Sets up a snippet of javascript to be inserted in the page.  It is placed at the end of the page, after jQuery is loaded. */
+    func addJavascript(javascript: String)
+    {
+        if _javascriptEntries == nil
+        {
+            _javascriptEntries = [ javascript ]
+        }
+        else
+        {
+            _javascriptEntries!.append(javascript)
+        }
+    }
+    
+    func setPopover(bodyText text: String, titleText title: String, buttonLabel: String = "OK" )
+    {
+        _popoverFields = [ "popoverTitle" : title, "popoverBody" : text, "buttonLabel" : buttonLabel ]
+    }
+    
+    
+// MARK:  Low-level template renderers
     
     func render( #templateName : String, withObject: AnyObject ) -> String
     {

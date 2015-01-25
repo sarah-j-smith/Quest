@@ -71,12 +71,22 @@ hyphens) will be copied to the Room Name field.
 
 ![Description](description.png "Description")
 
-Enter the description here for the room.  The other tabs are not yet implemented.
+Enter the description here for the room. 
+
+![Exits](exits-list.png "List of Exits")
+
+Create links to other rooms.  These are one-way and specify the destination
+room, the action type and name performed eg "move" and "North".
 
 ![Player](player.png "Player")
 
+This is a screenshot of the Player application rendering a room, with its
+title, description and buttons for the exits.
 
-Currently the player can only show the start room and its description
-because exits are not yet implemented.  Previous versions of the HTML
-player (which used the Markdown file format) did work, and pressing the
-CSS buttons for eg "North" or "Outside" would move from room to room.
+![Move to new Room](move-to-new-room.png "Moved")
+
+This shows the display of the Player, just after pressing a button for one
+of the exits from a previous room.  The view for the new room is
+displayed, and a dialog over the top of it details the action taken to
+reach here.  When the dialog is dismissed the player view for the room
+is revealed.

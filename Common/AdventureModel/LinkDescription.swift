@@ -11,43 +11,59 @@ import Foundation
 class LinkDescription : NSObject, NSCoding, GRMustacheSafeKeyAccess, Printable
 {
     /** What action does this link represent, eg "Go to lounge" */
-    var act: String
+    dynamic var linkAct: String {
+        didSet {
+            NSLog("act: \(linkAct)")
+        }
+    }
     
     /** What is the destination of this link, eg "lounge-room" */
-    var dest: String
+    dynamic var linkDest: String {
+        didSet {
+            NSLog("dest: \(linkDest)")
+        }
+    }
     
     /** What is the type of this link, by default "go" */
-    var type: String
+    dynamic var linkType: String {
+        didSet {
+            NSLog("type: \(linkType)")
+        }
+    }
     
     override var description : String {
         get {
-            return "LinkDescription(act: \(act), dest: \(dest), type: \(type))"
+            return "LinkDescription(act: \(linkAct), dest: \(linkDest), type: \(linkType))"
         }
     }
     
     class func safeMustacheKeys() -> NSSet
     {
-        return NSSet(objects: "act", "dest", "type" )
+        return NSSet(objects: "linkAct", "linkDest", "linkType" )
+    }
+    
+    convenience override init() {
+        self.init(act: "North", dest: "Room-Name", type: "Move")
     }
     
     init( act:String, dest:String, type:String)
     {
-        self.act = act
-        self.dest = dest
-        self.type = type
+        linkAct = act
+        linkDest = dest
+        linkType = type
     }
     
     required init(coder aDecoder: NSCoder) {
-        act = aDecoder.decodeObjectForKey("act") as String
-        dest = aDecoder.decodeObjectForKey("dest") as String
-        type = aDecoder.decodeObjectForKey("type") as String
+        linkAct = aDecoder.decodeObjectForKey("linkAct") as String
+        linkDest = aDecoder.decodeObjectForKey("linkDest") as String
+        linkType = aDecoder.decodeObjectForKey("linkType") as String
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(act, forKey: "act")
-        aCoder.encodeObject(dest, forKey: "dest")
-        aCoder.encodeObject(type, forKey: "type")
+        aCoder.encodeObject(linkAct, forKey: "linkAct")
+        aCoder.encodeObject(linkDest, forKey: "linkDest")
+        aCoder.encodeObject(linkType, forKey: "linkType")
     }
 }
 

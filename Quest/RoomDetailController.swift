@@ -58,7 +58,7 @@ class RoomDetailController : NSViewController, NSTabViewDelegate, QuestControlle
         {
             let tabName = tab.identifier as String
             switch tabName {
-                case "exits" :
+                case "Exits" :
                     exitsController.addExit()
                 default:
                     NSLog("")
@@ -73,7 +73,7 @@ class RoomDetailController : NSViewController, NSTabViewDelegate, QuestControlle
         {
             let tabName = tab.identifier as String
             switch tabName {
-            case "exits" :
+            case "Exits" :
                 exitsController.removeExit()
             default:
                 NSLog("")

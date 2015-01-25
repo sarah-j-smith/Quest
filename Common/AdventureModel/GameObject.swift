@@ -11,38 +11,54 @@ import Foundation
 class GameObject : NSObject, NSCoding, Printable
 {
     /** System name, must be unique; must have no spaces and be URL fragment safe */
-    var objectName : String
-    
-    /** User visible descriptive name */
-    var visibleName = "thing"
-    
-    override var description : String {
-        get {
-            return "Room: [\(objectName)] \(visibleName)"
+    var objectKey : String {
+        didSet {
+            NSLog("objectKey: \(objectKey)")
         }
     }
     
-    convenience init( objectName: String )
-    {
-        self.init(name:objectName, descriptiveName:objectName)
+    /** User visible descriptive name */
+    var objectName : String {
+        didSet {
+            NSLog("objectName: \(objectName)")
+        }
     }
     
-    init( name: String, descriptiveName: String )
+    var parentName : String?
+    
+    override var description : String {
+        get {
+            return "Object: [\(objectKey)] \(objectName)"
+        }
+    }
+    
+    convenience init(objectName name: String )
     {
+        let allNameChars = NSRange(location: 0, length: countElements(name))
+        let validCharsRegex = NSRegularExpression(pattern: "[\\P{L}]", options: nil, error: nil)!
+        let key = validCharsRegex.stringByReplacingMatchesInString(name, options: nil, range: allNameChars, withTemplate: "-")
+
+        self.init(objectKey:name.keySafe(), objectName:name)
+    }
+    
+    init(objectKey key: String, objectName name: String )
+    {
+        self.objectKey = key
         self.objectName = name
-        self.visibleName = descriptiveName
     }
     
     required init(coder aDecoder: NSCoder)
     {
+        objectKey = aDecoder.decodeObjectForKey("objectKey") as String!
         objectName = aDecoder.decodeObjectForKey("objectName") as String!
-        visibleName = aDecoder.decodeObjectForKey("visibleName") as String!
+        parentName = aDecoder.decodeObjectForKey("parentName") as String!
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder)
     {
+        aCoder.encodeObject(objectKey, forKey: "objectKey")
         aCoder.encodeObject(objectName, forKey: "objectName")
-        aCoder.encodeObject(visibleName, forKey: "visibleName")
+        aCoder.encodeObject(parentName, forKey: "parentName")
     }
 }

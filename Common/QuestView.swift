@@ -14,22 +14,24 @@ class QuestView : NSViewController
 {
     @IBOutlet var webView : WebView!
     
-    let rndr = Renderer()
-    var model = GameState()
-    var currentRoom : Room?
+    var stateManager : StatesManager!
     
-    func refreshView()
+    var model : GameState {
+        set {
+            stateManager = StatesManager(gameState: newValue)
+        }
+        get {
+            return stateManager.gameState
+        }
+    }
+    
+    func loadHtml(htmlString: String)
     {
-        let room = currentRoom!
-        let okLink = LinkDescription(act: "OK", dest: "#OK", type: "ok")
-        let paras = rndr.htmlParagraphs([room.details.roomDescription])
-        let html = rndr.htmlTemplate(room.roomName, bodyText: paras!, buttons: [ okLink ])
-        
         let defaults = NSUserDefaults.standardUserDefaults()
         if let webPath: String = defaults.valueForKey("webpath") as? String
         {
             var err : NSError?
-            let ok = html.writeToFile(webPath, atomically: false, encoding: NSUTF8StringEncoding, error: &err)
+            let ok = htmlString.writeToFile(webPath, atomically: false, encoding: NSUTF8StringEncoding, error: &err)
             if (ok)
             {
                 NSLog("Wrote HTML: \(webPath)")
@@ -46,7 +48,31 @@ class QuestView : NSViewController
         let bundle = NSBundle.mainBundle()
         let baseURL = bundle.resourceURL
         
-        webView.mainFrame.loadHTMLString(html, baseURL: baseURL)
+        webView.mainFrame.loadHTMLString(htmlString, baseURL: baseURL)
+    }
+    
+    func refreshView()
+    {
+        let html = stateManager.currentHTML()
+        loadHtml(html)
+    }
+    
+    func showAlert(alertString: String, title: String)
+    {
+//        let alert = NSAlert()
+//        alert.messageText = title
+//        alert.informativeText = alertString
+//        alert.alertStyle = NSAlertStyle.InformationalAlertStyle
+//        alert.addButtonWithTitle("OK")
+//        
+//        if let w = webView.window
+//        {
+//            alert.beginSheetModalForWindow(w, completionHandler: { (response: NSModalResponse) -> Void in
+//                self.refreshView()
+//            })
+//        }
+        stateManager.renderer.setPopover(bodyText: alertString, titleText: title)
+        refreshView()
     }
     
     override func webView(sender: WebView!, didFailLoadWithError error: NSError!, forFrame frame: WebFrame!)
@@ -67,8 +93,8 @@ class QuestView : NSViewController
         println(request.URL)
         if let frag = request.URL.fragment
         {
-//            let ( actName, newText ) = stateMgr.executeAction( frag )
-//            showAlert(newText, title: actName )
+            let ( actName, newText ) = stateManager.executeAction( frag )
+            showAlert(newText, title: actName )
             NSLog("Got fragment: \(frag)")
         }
         listener.use()
